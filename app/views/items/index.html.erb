@@ -1,33 +1,21 @@
 <h1>item index</h1>
+<%= link_to '新規投稿', new_item_path %>
+
 <div class="container">
   <div class="row">
     <div class="row">
+      <% @items.each do |item| %>
       <div class="col-xs-4 col-lg-2">
         <div class="box">
-        </div>      
-      </div>
-      <div class="col-xs-4 col-lg-2">
-        <div class="box">
-        </div>      
-      </div>
-      <div class="col-xs-4 col-lg-2">
-        <div class="box">
-        </div>      
-      </div>
-      <div class="col-xs-4 col-lg-2">
-        <div class="box">
-        </div>      
-      </div>
-      <div class="col-xs-4 col-lg-2">
-        <div class="box">
-        </div>      
-      </div>
-      <div class="col-xs-4 col-lg-2">
-        <div class="box">
-        </div>      
+          <p><%= attachment_image_tag item, :image, :fill, 300,  300, format: 'jpeg' %></p>
+          <p><%= item.name %></p>
+        </div>
+        <% end %>
       </div>
     </div>
   </div>
 </div>
 
-<%= link_to '新規投稿', new_item_path %>
+
+
+
