@@ -37,5 +37,5 @@ class ItemsController < ApplicationController
 end
 
 def item_params
-  params.require(:item).permit(:image,:name)
+  params.require(:item).permit(:image,:name,:url)
 end
